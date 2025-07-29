@@ -198,7 +198,7 @@ for (networkID,repNum) in [(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8,10),(6,1
         
         # update and solve the model
         model.update()
-        model.setParam('LogFile', 'result_MNL_revised/grblog/grblog_MNL_%s_%s_%s.txt'%(networkID,rep,machineName))        
+        model.setParam('LogFile', '1_result_MNL_revised/grblog/grblog_MNL_%s_%s_%s.txt'%(networkID,rep,machineName))        
         model.optimize()
         
         
@@ -244,7 +244,7 @@ for (networkID,repNum) in [(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8,10),(6,1
         print('infeasibility =',len(confG.subgraph(offered).edges()))
 
         optSolution = pd.DataFrame(list(zip(varNameArray, varValueArray)),columns =['varName', 'varVal'])
-        optSolution.to_csv(r'result_MNL_revised/opt/opt_MNL_%s_%s_%s.csv'%(networkID,rep,machineName), index = False)#Check
+        optSolution.to_csv(r'1_result_MNL_revised/opt/opt_MNL_%s_%s_%s.csv'%(networkID,rep,machineName), index = False)#Check
         
         machineColumn += [machineName]    
         netColumn += [networkID]
@@ -265,7 +265,7 @@ for (networkID,repNum) in [(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8,10),(6,1
         listZip = list(zip(machineColumn,netColumn,nodColumn,edgColumn,proColumn,disColumn,repColumn,metColumn,boundColumn,optColumn,revColumn,infColumn,ncColumn,timeColumn))
         colName = ['Machine','networkID','nodes','edges','products','options','rep','method','Bounding','ILP OPT','accurate OPT','infeasibility','B&B','Runtime']
         result = pd.DataFrame(listZip,columns = colName)
-        result.to_csv(r'result_MNL_revised/result_MNL_%s_%s.csv'%(networkID,machineName), index = False)#Check
+        result.to_csv(r'1_result_MNL_revised/result_MNL_%s_%s.csv'%(networkID,machineName), index = False)#Check
         
         
         
