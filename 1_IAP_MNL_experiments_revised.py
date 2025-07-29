@@ -33,7 +33,7 @@ for (networkID,repNum) in [(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8,10),(6,1
     
     for rep in range(repNum):        
         lines = pd.read_csv('lines/lines_%s.csv'%networkID)
-        nodes = pd.read_csv('nodes_%sproducts_choice_revised/nodes_%s_%s.csv'%(numProducts,networkID,rep))
+        nodes = pd.read_csv('nodes_%sproducts_choice_revised/%s/nodes_%s_%s.csv'%(numProducts,networkID,networkID,rep))
         #lines = pd.read_csv('yt_lines.csv')
         #nodes = pd.read_csv('yt_nodes_20220123.csv')
         options = pd.read_csv('options_%sproducts_revised.csv'%numProducts)
