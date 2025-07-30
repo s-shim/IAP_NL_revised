@@ -16,7 +16,7 @@ numProducts = 3
 bounding = False
 timeLimit = True
 
-for (networkID,repNum,TL) in [(5,10,3600),(4,10,3600*2),(2,10,3600*3),(0,10,3600*4)]:#,(0,10),(8,10),(6,10),(7,10),(1,10)]:
+for (networkID,repNum,TL) in [(5,10,3600),(4,10,3600),(2,10,3600),(0,10,3600)]:#,(0,10),(8,10),(6,10),(7,10),(1,10)]:
     for bounding in [True,False]:
         machineColumn = []    
         netColumn = []
