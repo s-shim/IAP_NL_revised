@@ -446,12 +446,12 @@ numProducts = 3
 ## Common instance
 options = pd.read_csv('options_%sproducts_revised.csv'%numProducts)
 forbidden = pd.read_csv('forbiddenPairs_%sproducts_choice_revised.csv'%numProducts)
-#doubleOptionList = list(combinations(list(options['Option']),2))
-doubleOptionList = [(1,2),(1,3),(1,4),(1,5),(1,6),(2,3),(2,4),(2,5)]
+doubleOptionList = list(combinations(list(options['Option']),2))
+# doubleOptionList = [(1,2),(1,3),(1,4),(1,5),(1,6),(2,3),(2,4),(2,5)]
 
 
 ## Instances
-for (networkID,repNum) in [('Gowalla',1)]:
+for (networkID,repNum) in [('Gowalla',10)]:
     
     lines = pd.read_csv('%s/lines/lines_%s.csv'%(networkID,networkID))
 
