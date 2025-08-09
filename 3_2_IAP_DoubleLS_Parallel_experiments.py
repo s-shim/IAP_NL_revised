@@ -470,7 +470,7 @@ for (networkID,repNum) in [(0,1)]:#[(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8
 
         if __name__ == '__main__':
             numCores = len(doubleOptionList)
-            p = mp.Pool(numCores)
+            p_mp = mp.Pool(numCores)
         
             tic = time.time()
             multiArgs = []  
@@ -480,7 +480,7 @@ for (networkID,repNum) in [(0,1)]:#[(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8
         
                 multiArgs += [(doubleQ1,doubleQ2,profiling,logSum,iteration,machineName,networkID,rep,tic)]
         
-            multiResults = p.map(doubleLS2, multiArgs)
+            multiResults = p_mp.map(doubleLS2, multiArgs)
             entireToc = time.time()
             
             bestFinalTotalRevenue = 0.0
@@ -497,8 +497,16 @@ for (networkID,repNum) in [(0,1)]:#[(9,50),(5,50),(3,50),(4,50),(2,50),(0,10),(8
             
             finalTotalRevenue,finalRevenue,finalIs_offered,finalOptionsOffered,finalTpw,finalPackage = bestFinalSolution
                                 
+            feasibility = 1
+            for ((u,q_u), (v,q_v)) in confG.edges():
+                if finalIs_offered[u,q_u] + finalIs_offered[v,q_v] > 2 - 0.0001:
+                    feasibility = 0
+                    break
+
             varName = ['revenue']
             varVal = [bestFinalTotalRevenue]
+            varName += ['feasibility']
+            varVal += [feasibility]
             varName += ['doubleQ1']
             varVal += [bestDoubleQ1]
             varName += ['doubleQ2']
