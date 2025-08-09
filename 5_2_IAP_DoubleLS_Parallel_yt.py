@@ -506,6 +506,8 @@ for (networkID,repNum) in [('yt',1)]:
                                 
             varName = ['revenue']
             varVal = [bestFinalTotalRevenue]
+            varName += ['feasibility']
+            varVal += [feasibility]
             varName += ['doubleQ1']
             varVal += [bestDoubleQ1]
             varName += ['doubleQ2']
