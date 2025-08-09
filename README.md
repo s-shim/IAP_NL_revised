@@ -1,6 +1,6 @@
 2nd round:
 
-(yt) Experiment 5_1 excludes the double option (4,5) that made errors (Line 437). After debugging, we will perform (4,5) separately later.
+(yt) Experiment 5_1 excludes the double option (4,5) that made errors (Line 437). Debugging: p as multiprocessing -> p_mp Then, we can perform (4,5) separately (Line 438).
 
 (MNL) Experiment 1_1.
 
