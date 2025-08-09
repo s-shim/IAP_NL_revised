@@ -362,8 +362,8 @@ def stableOption(doubleQ1,doubleQ2,profiling,logSum):
     
     nodeWeight = {}
     for u in nodeList:
-        for p in optionList:
-            nodeWeight[u,p] = price[p] * pw[u,p] / (1 + pw[u,p])
+        for q in optionList:
+            nodeWeight[u,q] = price[q] * pw[u,q] / (1 + pw[u,q])
             
     subConfGNodeList = []
     for u in nodeList:
@@ -435,6 +435,7 @@ forbidden = pd.read_csv('forbiddenPairs_%sproducts_choice_revised.csv'%numProduc
 doubleOptionList = list(combinations(list(options['Option']),2))
 # doubleOptionList = [(1,2),(1,3),(1,4),(1,5),(1,6),(2,3),(2,4),(2,5)]
 doubleOptionList.remove((4,5))
+# doubleOptionList = [(4,5)]
 
 ## Instances
 for (networkID,repNum) in [('yt',1)]:
@@ -470,7 +471,7 @@ for (networkID,repNum) in [('yt',1)]:
 
         if __name__ == '__main__':
             numCores = len(doubleOptionList)
-            p = mp.Pool(numCores)
+            p_mp = mp.Pool(numCores)
         
             tic = time.time()
             multiArgs = []  
@@ -480,7 +481,7 @@ for (networkID,repNum) in [('yt',1)]:
         
                 multiArgs += [(doubleQ1,doubleQ2,profiling,logSum,iteration,machineName,networkID,rep,tic)]
         
-            multiResults = p.map(doubleLS2, multiArgs)
+            multiResults = p_mp.map(doubleLS2, multiArgs)
             entireToc = time.time()
             
             bestFinalTotalRevenue = 0.0
