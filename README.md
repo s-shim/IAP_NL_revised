@@ -1,9 +1,9 @@
 2nd round:
 
-(yt) Experiment 5_1 excludes the double option (4,5) that made errors (Line 437). Debugging: p as multiprocessing -> p_mp Then, we can perform (4,5) separately (Line 438).
+(yt) Experiment 5_2 excludes the double option (4,5) that made errors (Line 437). Debugging: p as multiprocessing -> p_mp Then, we can perform (4,5) separately (Line 438).
 
-(MNL) Experiment 1_1.
+(MNL) Experiment 1_2
 
-(Sensitivity) Experiment 2_1 performs the heuristic (doubleSolution-Local Search) on the small-scale instances with logSum parameter = 0.5 for sensitivity analysis
+(Sensitivity) Experiment 2_2 performs the heuristic (doubleSolution-Local Search) on the small-scale instances with logSum parameter = 0.5 for sensitivity analysis
 
-(Warm) Experiment 6_1 warm starts Enhanced on large-scale instances for 5 hours.
+(Warm) Experiment 6_2 warm starts Enhanced on large-scale instances for 5 hours.
