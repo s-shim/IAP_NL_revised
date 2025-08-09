@@ -497,6 +497,12 @@ for (networkID,repNum) in [('yt',1)]:
             print(bestFinalTotalRevenue,bestDoubleQ1,bestDoubleQ2,bestFinalOptions,bestIteration)
             
             finalTotalRevenue,finalRevenue,finalIs_offered,finalOptionsOffered,finalTpw,finalPackage = bestFinalSolution
+
+            feasibility = 1
+            for ((u,q_u), (v,q_v)) in confG.edges():
+                if finalIs_offered[u,q_u] + finalIs_offered[v,q_v] > 2 - 0.0001:
+                    feasibility = 0
+                    break
                                 
             varName = ['revenue']
             varVal = [bestFinalTotalRevenue]
