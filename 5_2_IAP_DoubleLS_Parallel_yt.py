@@ -434,8 +434,6 @@ options = pd.read_csv('options_%sproducts_revised.csv'%numProducts)
 forbidden = pd.read_csv('forbiddenPairs_%sproducts_choice_revised.csv'%numProducts)
 doubleOptionList = list(combinations(list(options['Option']),2))
 # doubleOptionList = [(1,2),(1,3),(1,4),(1,5),(1,6),(2,3),(2,4),(2,5)]
-doubleOptionList.remove((4,5))
-# doubleOptionList = [(4,5)]
 
 ## Instances
 for (networkID,repNum) in [('yt',1)]:
@@ -456,7 +454,7 @@ for (networkID,repNum) in [('yt',1)]:
     grandInitialOfferColumn = []
     grandBestOptionsColumn = []
 
-    for rep in range(repNum):            
+    for rep in [1]:#range(repNum):            
 
         print()
         print('### START')
