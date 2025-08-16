@@ -1,0 +1,4 @@
+Iteration,Machine,networkID,rep,step,addition,deletion,logSum,LOPT,Offered Options,Time
+6,p0257.ten.osc.edu,yt,1,Initial,0,0,0.75,71935690.92426215,2269780,491.47448229789734
+6,p0257.ten.osc.edu,yt,1,Intermediate,520305,0,0.75,72685432.99358156,2790085,26876.58049607277
+6,p0257.ten.osc.edu,yt,1,Final,0,0,0.75,72685432.99357066,2790085,57535.02969002724
