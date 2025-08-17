@@ -24,10 +24,10 @@ Code 5 -> Code 5_1 (Code 5_2 + Code 5_3)
 
 2_3_IAP_NLCC_warm_facebook_sensitivity_experiments.py warm starts small instances (logSum = 0.5) comparing (Enhanced) with default (MILP-NL)
 
-4_3_IAP_DoubleLS_Parallel_Gowalla.py tackles Gowalla again with the updated code
-
 4th Round:
 
 2_4_IAP_NLCC_warm_facebook_sensitivity_experiments.py can warm start with the heuristic solutions to large-scale instances, which are given by (2_3_IAP_DoubleLS_Parallel_experiments.py) in Round 3  
+
+4_4_IAP_DoubleLS_Parallel_Gowalla.py tackles Gowalla again with the updated code if the computing resource is still available
 
 The End
