@@ -28,6 +28,6 @@ Code 5 -> Code 5_1 (Code 5_2 + Code 5_3)
 
 4th Round:
 
-2_4_IAP_NLCC_warm_facebook_sensitivity_experiments.py can warm start with the heuristic solutions to large-scale instances given by 2_3_IAP_DoubleLS_Parallel_experiments.py 
+2_4_IAP_NLCC_warm_facebook_sensitivity_experiments.py can warm start with the heuristic solutions to large-scale instances, which are given by (2_3_IAP_DoubleLS_Parallel_experiments.py) in Round 3  
 
 The End
